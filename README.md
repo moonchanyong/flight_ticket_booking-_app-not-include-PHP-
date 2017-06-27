@@ -1,3 +1,17 @@
+
+
+IONIC 환경
+wrote by TypeScript and HTML5
+
+flight_ticket_booking-_app  communicate with server ( localserver ) 
+PHP는 포함안되있음  _서버따로구축함
+
+
+
+
+
+
+
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
 ## How to use this template
