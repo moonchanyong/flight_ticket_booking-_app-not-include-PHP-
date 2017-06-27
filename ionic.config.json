@@ -1,0 +1,13 @@
+{
+  "name": "termProject",
+  "app_id": "",
+  "type": "ionic-angular",
+          "proxies": [
+        {
+            "path": "/",
+            "proxyUrl": "http://192.168.0.6"
+        }
+    ]
+
+
+}

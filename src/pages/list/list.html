@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Book</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      
+    <ion-item>
+      <ion-label>출발공항</ion-label>
+      <ion-select [(ngModel)]="startair" >
+        <ion-option  value="NAARKPK">김해</ion-option>
+        <ion-option value="NAARKJK">군산</ion-option>
+        <ion-option value="NAARKTU">청주</ion-option>
+        <ion-option value="NAARKTN" >대구</ion-option>
+        <ion-option value="NAARKPC">제주</ion-option>
+        <ion-option value="NAARKPU">울산</ion-option>
+ 
+      </ion-select>
+    </ion-item>
+      
+    <ion-item>
+      <ion-label>도착공항</ion-label>
+      <ion-select [(ngModel)]="endair" >
+        <ion-option  value="NAARKPK">김해</ion-option>
+        <ion-option value="NAARKJK">군산</ion-option>
+        <ion-option value="NAARKTU">청주</ion-option>
+        <ion-option value="NAARKTN" >대구</ion-option>
+        <ion-option value="NAARKPC">제주</ion-option>
+        <ion-option value="NAARKPU">울산</ion-option>
+ 
+      </ion-select>
+    </ion-item>
+      
+      
+      
+          
+      <ion-item  >
+       <button ion-button item-end (click)="getSchedule()"  ><ion-icon name="search"></ion-icon>조회</button>
+      
+
+      </ion-item>
+      
+
+
+      
+          
+      
+            <ion-item [navPush]="pushPage" [navParams]="item.SCHEDULE_ID"  *ngFor="let item of xmlItems" >
+                <p> 출발시간 :{{ item.DEPARTURE_TIME}} ~ 도착시간: {{ item.ARRIVE_TIME}}</p>
+            
+            
+                
+      </ion-item>
+
+  </ion-list>
+    
+
+
+  
+    
+</ion-content>

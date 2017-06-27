@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title align=center> sign up </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+
+    <ion-list>
+
+  <ion-item>
+    <ion-label floating>Username</ion-label>
+    <ion-input type="text" [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+
+        
+  <ion-item>
+    <ion-label floating >Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating >이름</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+          <ion-item>
+    <ion-label floating >주소</ion-label>
+    <ion-input type="text" [(ngModel)]="address"></ion-input>
+  </ion-item>
+          <ion-item>
+    <ion-label floating >휴대전화 번호</ion-label>
+    <ion-input type="text" [(ngModel)]="phone"></ion-input>
+              
+  </ion-item>
+</ion-list>
+    
+ 
+  <button ion-button (click)="signup()" >회원가입</button>
+    
+    
+    <button ion-button navPop >취소 </button>
+</ion-content>

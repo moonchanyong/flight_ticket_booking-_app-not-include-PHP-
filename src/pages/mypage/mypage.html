@@ -1,0 +1,60 @@
+
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title align=center> Mypage </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-card>
+
+
+    <ion-card-content>
+      <ion-card-title>
+        My information
+      </ion-card-title>
+
+
+            <ion-item>                
+        ID : {{id}}
+    </ion-item>
+            <ion-item>
+        이름 : {{name}}
+    </ion-item>
+            <ion-item>
+      주소 : {{address}}
+    </ion-item>  
+              <ion-item>
+      전화번호 :{{phone}}
+    </ion-item>
+              <ion-item>
+      마일리지 : {{mileage}}
+    </ion-item>
+        
+        
+    </ion-card-content>
+
+
+  </ion-card>
+ 
+    
+      <ion-card>
+              <ion-card-content>
+                <ion-card-title>
+                RESERVATION
+          </ion-card-title>
+                      <ion-item *ngFor="let item of xmlItems" (click)="movepayPage()">
+                  <p> 출발시간 :{{ item.DEPARTURE_TIME}} ~ 
+                          </p>
+                      <p>도착시간: {{ item.ARRIVE_TIME}}</p>
+                           <p>경로: {{ item.ROUTE_ID}}</p>
+                
+      </ion-item>
+          </ion-card-content>
+    </ion-card>
+</ion-content>
